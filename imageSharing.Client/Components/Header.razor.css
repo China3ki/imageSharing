@@ -1,0 +1,23 @@
+﻿header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header a .header__logo {
+  width: 100px;
+}
+header .header__buttons .header__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  mask-size: contain;
+}
+header .header__buttons .header__icon--mode {
+  background-color: black;
+  mask-image: url("icons/sun.svg");
+}
+header .header__buttons .header__icon--mode.dark {
+  background-color: white;
+  mask-image: url("icons/moon.svg");
+}

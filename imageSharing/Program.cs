@@ -1,5 +1,5 @@
-using imageSharing.Client.Pages;
 using imageSharing.Components;
+using imageSharing.Shared.Services;
 
 namespace imageSharing
 {
@@ -13,6 +13,9 @@ namespace imageSharing
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents()
                 .AddInteractiveWebAssemblyComponents();
+
+            // Services
+            builder.Services.AddScoped<ThemeService>();
 
             var app = builder.Build();
 

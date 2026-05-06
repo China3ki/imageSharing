@@ -8,7 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\fonts\now.light.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\fonts\now.light.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\imageSharing.Client\imageSharing.Client.csproj" />
+    <ProjectReference Include="..\imageSharing.shared\imageSharing.Shared.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.6" />
   </ItemGroup>
 

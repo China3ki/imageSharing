@@ -1,0 +1,27 @@
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px;
+    a {
+        .header__logo {
+            width:100px;
+        }
+    }
+    .header__buttons {
+        .header__icon {
+            display:block;
+            width:40px;
+            height:40px;
+            mask-size:contain;
+        }
+        .header__icon--mode {
+            background-color:black;
+            mask-image: url("icons/sun.svg");
+        }
+        .header__icon--mode.dark {
+            background-color:white;
+            mask-image: url("icons/moon.svg");
+        }
+    }
+}

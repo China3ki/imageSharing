@@ -1,0 +1,9 @@
+﻿<header>
+    <a href="#">
+        <img class="header__logo" src="@Assets["favicon.png"]" alt="imageSharing logo" />
+    </a>
+    <div class="header__buttons">
+        <i class="header__icon header__icon--mode @(ThemeService.Theme == Theme.Light ? "light" : "dark")" @onclick="ThemeService.ToogleTheme"></i>
+
+    </div>
+</header>
