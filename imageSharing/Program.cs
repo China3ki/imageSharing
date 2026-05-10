@@ -1,5 +1,8 @@
+using imageSharing.Client.Services;
 using imageSharing.Components;
 using imageSharing.Shared.Services;
+using Majorsoft.Blazor.Extensions.BrowserStorage;
+
 
 namespace imageSharing
 {
@@ -16,6 +19,9 @@ namespace imageSharing
 
             // Services
             builder.Services.AddScoped<ThemeService>();
+            builder.Services.AddBrowserStorage();
+            builder.Services.AddScoped<SearchService>();
+
 
             var app = builder.Build();
 

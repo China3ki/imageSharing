@@ -8,3 +8,36 @@
   box-sizing: border-box;
   font-family: now;
 }
+
+a {
+  text-decoration: none;
+}
+
+.dark--main {
+  transition: 0.5s;
+  background-color: #37353E;
+  transition-timing-function: ease;
+}
+
+.light--main {
+  transition: 0.5s;
+  background-color: white;
+  transition-timing-function: ease;
+}
+
+.dark--text {
+  transition: 0.5s;
+  color: white;
+  transition-timing-function: ease;
+}
+
+.light--text {
+  transition: 0.5s;
+  color: black;
+  transition-timing-function: ease;
+}
+
+.text--hover:hover {
+  color: #4fd918;
+  cursor: pointer;
+}

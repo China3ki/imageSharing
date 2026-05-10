@@ -1,27 +1,115 @@
+@import "../../imageSharing.Shared/Imports/_colors";
 header {
-    display:flex;
+    /*display:flex;
     justify-content:space-between;
-    align-items: center;
+    align-items: center;*/
+    // Tymczasowe
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     padding:10px;
+    gap:3px;
+    width:100%;
     a {
         .header__logo {
-            width:100px;
+            width:110px;
         }
     }
     .header__buttons {
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-weight: 600;
+        justify-self:end;
         .header__icon {
             display:block;
-            width:40px;
-            height:40px;
+            width:35px;
+            height:35px;
             mask-size:contain;
+            cursor:pointer;
+            transition: .2s;
         }
-        .header__icon--mode {
+        .header__login {
+            font-size:18px;
+        }
+        .header__register {
+            border-left: 2px dashed black;
+            padding-left: 10px;
+            font-size:18px;
+        }
+        .header__register.dark--text {
+            border-left-color: white;
+        }
+        .header__icon:hover {
+            background-color: rgba($second, .6) !important;
+        }
+        .header__icon--mode.light {
             background-color:black;
             mask-image: url("icons/sun.svg");
+            animation-name: light;
+            animation-duration: .5s;
+            animation-timing-function: ease;
         }
         .header__icon--mode.dark {
-            background-color:white;
+            background-color: $second;
             mask-image: url("icons/moon.svg");
+            animation-name: dark;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+        }
+        @keyframes dark {
+            0% {background-color:black; mask-image: url("icons/sun.svg");}
+            50% {opacity: 0; background-color: $second; mask-image: url("icons/sun.svg");}
+            55% {mask-image: url("icons/moon.svg");}
+            100% {opacity:1; background-color:$second;}
+        }
+        @keyframes light {
+            0% {background-color:white; mask-image: url("icons/moon.svg");}
+            50% {opacity: 0; background-color: black; mask-image: url("icons/moon.svg");}
+            55% {mask-image: url("icons/sun.svg");}
+            100% {opacity:1; background-color:black;}
+        }
+    }
+    .header__form {
+        display:flex;
+        justify-content:center;
+        grid-column: 1 / span 2;
+        justify-self:center;
+        width:100%;
+        max-width: 700px;
+        .header__search {
+            height: 40px;
+            padding:5px;
+            width:70%;
+            border:none;
+            border-bottom: 1px solid black;
+        }
+        .header__search.dark--main {
+            border-bottom: 1px solid white;
+            color:white;
+        }
+        .header__search:focus {
+            outline:none;
+            border-bottom: 1px solid $second;
+        }
+        .header__search.dark--main:focus {
+            background-color: $black--second;
+        }
+        .header__search.dark--main::placeholder {
+            color:rgba(white, .6);
+        }
+        .header__select {
+            height:40px;
+            width:150px;
+            padding:5px;
+            margin-left: 10px;
+        }
+        .header__submit {
+            height:40px;
+            padding:10px;
+            border:none;
+            background-color: transparent;
+            font-weight: bolder;
+            margin-left: 10px;
         }
     }
 }
