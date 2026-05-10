@@ -16,4 +16,12 @@
         </select>
         <input class="header__submit text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")" type="submit" value="Search" />
     </form>
+    <nav class="header__nav ">
+        <ul class="nav__ul">
+            <li class="text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")"><NavLink ActiveClass="active__link" href="/">Newest</NavLink></li>
+            <li class="text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")"><NavLink ActiveClass="active__link">Top</NavLink></li>
+            <li class="text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")"><NavLink ActiveClass="active__link">Popular Tags</NavLink></li>
+            <li class="text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")"><NavLink ActiveClass="active__link">Popular users</NavLink></li>
+        </ul>
+    </nav>
 </header>

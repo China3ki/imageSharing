@@ -12,6 +12,12 @@
 a {
     text-decoration:none;
 }
+a.dark--text:visited {
+    color: white;
+}
+a.light--text:visited {
+    color: black;
+}
 .dark--main {
     transition: .5s;
     background-color: $black;
@@ -32,7 +38,21 @@ a {
     color: black;
     transition-timing-function: ease;
 }
+.light--icon {
+    transition: .5s;
+    background-color: black !important;
+    transition-timing-function: ease;
+}
+.dark--icon {
+    transition: .5s;
+    background-color: white !important;
+    transition-timing-function: ease;
+}
 .text--hover:hover {
-    color: rgba($second, 1);
+    color: rgba($second, 1) !important;
     cursor:pointer;
+    transition: .2s;
+}
+.active__link {
+    color: $second;
 }

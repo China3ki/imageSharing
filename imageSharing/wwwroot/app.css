@@ -13,6 +13,14 @@ a {
   text-decoration: none;
 }
 
+a.dark--text:visited {
+  color: white;
+}
+
+a.light--text:visited {
+  color: black;
+}
+
 .dark--main {
   transition: 0.5s;
   background-color: #37353E;
@@ -37,7 +45,24 @@ a {
   transition-timing-function: ease;
 }
 
+.light--icon {
+  transition: 0.5s;
+  background-color: black !important;
+  transition-timing-function: ease;
+}
+
+.dark--icon {
+  transition: 0.5s;
+  background-color: white !important;
+  transition-timing-function: ease;
+}
+
 .text--hover:hover {
-  color: #4fd918;
+  color: #4fd918 !important;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.active__link {
+  color: #4fd918;
 }

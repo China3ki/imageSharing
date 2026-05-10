@@ -1,0 +1,49 @@
+﻿@page "/"
+@rendermode InteractiveAuto
+<PageTitle>imageSharing</PageTitle>
+<main class="@(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
+    <div class="main__wrapper">
+    <section class="@(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
+        <article class="article">
+            <a href="#" class="image__header">
+                <img class="image__avatar" src="@Assets["/templates/template.jpg"]" alt="User profile image" />
+                <span class="image__nickname text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Jan Kowalski</span>
+            </a>
+                <img class="image" src="https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg" alt="image" />
+                <div class="image__buttons">
+                    <div class="image__buttons--container">
+                        <div class="image__icon--group @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
+                            <i class="image__icon image__icon--like @(ThemeService.Theme == Theme.Light ? "light--icon" : "dark--icon")"></i>
+                            <span class="@(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">40</span>
+                        </div>
+                        <div class="image__icon--group @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
+                            <i class="image__icon image__icon--save @(ThemeService.Theme == Theme.Light ? "light--icon" : "dark--icon")"></i>
+                            <span class="@(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">20</span>
+                        </div>
+                    </div>
+                    <span class="image__download text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Download</span>
+                </div>
+        </article>
+@*         <article class="article">
+            <div class="image__header">
+                <img class="image__avatar" src="@Assets["/templates/template.jpg"]" alt="User profile image" />
+                <span class="image__nickname @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Jan Kowalski</span>
+            </div>
+            <img class="image" src="https://i.pinimg.com/736x/00/53/37/005337fcbd567467c3c7f3fac04f6a77.jpg" alt="image" />
+            <div class="image__buttons">
+                <div class="image__buttons--container">
+                    <div class="image__icon--group @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
+                        <i class="image__icon image__icon--like @(ThemeService.Theme == Theme.Light ? "light--icon" : "dark--icon")"></i>
+                        <span class="@(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">40</span>
+                    </div>
+                    <div class="image__icon--group @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
+                        <i class="image__icon image__icon--save @(ThemeService.Theme == Theme.Light ? "light--icon" : "dark--icon")"></i>
+                        <span class="@(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">20</span>
+                    </div>
+                </div>
+                <span class="image__download text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Download</span>
+            </div>
+        </article> *@
+    </section>
+    </div>
+</main>

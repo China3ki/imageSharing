@@ -1,0 +1,89 @@
+
+section {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding: 10px 0px 10px 0px;
+    .article {
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        .image__header{
+            display:flex;
+            gap:5px;
+            align-items:center;
+            padding:5px;
+            .image__avatar {
+                width:40px;
+                height:40px;
+                border-radius:50%;
+            }
+            .image__nickname {
+                font-weight:bolder;
+                font-size: 15px;
+            }
+        }
+        .image__buttons {
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            padding: 5px 10px 5px 10px;
+            .image__buttons--container {
+                display:flex;
+                align-items:center;
+                gap:5px;
+                .image__icon--group {
+                    display:flex;
+                    align-items:center;
+                    border:1px solid black;
+                    padding: 0px 5px 0px 5px;
+                    border-radius: 10px;
+                    .image__icon {
+                        display:block;
+                        width:25px;
+                        height: 25px;
+                        background-color:black;
+                        mask-size: contain;
+                    }
+                    .image__icon--like {
+                        mask-image: url("/icons/like.svg");
+                    }
+                    .image__icon--save {
+                        mask-image: url("/icons/save.svg");
+                    }
+                }
+                .image__icon--group.dark--main {
+                    border: 1px solid white;
+                }
+            }
+            .image__download {
+                font-weight:bolder;
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        padding:15px;
+    }
+
+    .main__wrapper {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width:100%;
+        max-width:1200px;
+        gap: 25px;
+    }
+    section {
+        .article {
+            max-width:350px;
+            .image {
+                max-width: 350px;
+            }
+        }
+    }
+}

@@ -6,12 +6,13 @@ header {
     // Tymczasowe
     display:grid;
     grid-template-columns: 1fr 1fr;
-    padding:10px;
+    padding:5px;
     gap:3px;
     width:100%;
+    border-bottom: 1px solid $main;
     a {
         .header__logo {
-            width:110px;
+            width:70px;
         }
     }
     .header__buttons {
@@ -22,19 +23,15 @@ header {
         justify-self:end;
         .header__icon {
             display:block;
-            width:35px;
-            height:35px;
+            width:25px;
+            height:25px;
             mask-size:contain;
             cursor:pointer;
             transition: .2s;
         }
-        .header__login {
-            font-size:18px;
-        }
         .header__register {
             border-left: 2px dashed black;
             padding-left: 10px;
-            font-size:18px;
         }
         .header__register.dark--text {
             border-left-color: white;
@@ -78,24 +75,26 @@ header {
         max-width: 700px;
         .header__search {
             height: 40px;
-            padding:5px;
+            padding:10px;
             width:70%;
-            border:none;
-            border-bottom: 1px solid black;
+            border: 1px solid rgba(black, .1);
+            background-color: rgba(lightgray, .2);
+            border-radius:25px;
         }
         .header__search.dark--main {
-            border-bottom: 1px solid white;
+            border: 1px solid rgba(white, .1);
+            background-color: rgba(white, .1);
             color:white;
         }
         .header__search:focus {
             outline:none;
-            border-bottom: 1px solid $second;
+            background-color: white;
         }
         .header__search.dark--main:focus {
             background-color: $black--second;
         }
         .header__search.dark--main::placeholder {
-            color:rgba(white, .6);
+            color:rgba(white, .8);
         }
         .header__select {
             height:40px;
@@ -112,4 +111,34 @@ header {
             margin-left: 10px;
         }
     }
+    .header__nav {
+        padding: 15px 15px 5px 15px;
+        grid-column: 1 / span 2;
+        width:100%;
+        .nav__ul {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            list-style: none;
+            gap: 10px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    header {
+        grid-template-columns: min-content 1fr min-content;
+        .header__form {
+            grid-row: 1;
+            grid-column:2;
+            width:100%;
+            align-self:center;
+            .header__search {
+                width: 100%;
+            }
+        }
+        .header__nav {
+            grid-column: 1 / span 3;
+        }
+    }
+
 }
