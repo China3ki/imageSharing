@@ -56,3 +56,68 @@ a.light--text:visited {
 .active__link {
     color: $second;
 }
+/// Form
+.main__form {
+    min-height:calc(100vh - 172px);
+    padding:20px;
+}
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        line-height: 0.1em;
+        margin: 10px 0 20px;
+        width:80%;
+        max-width:500px;
+    }
+    h2 .form__text {
+         background:#fff; 
+         padding:0 10px; 
+    }
+
+    .form__companies {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        max-width: 500px;
+
+        .form__container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid black;
+
+            .form__icon {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+    .form {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        gap:15px;
+        width: 80%;
+        max-width: 500px;
+        .form__input {
+            height:40px;
+            width:100%;
+            padding:10px;
+        }
+        .form__submit {
+            padding:15px;
+        }
+}

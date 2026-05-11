@@ -1,0 +1,31 @@
+﻿@page "/login"
+<PageTitle>Login</PageTitle>
+<main class="main__form">
+    <div class="form__wrapper">
+        <h1>Login</h1>
+        <h2><span class="form__text">Login with</span></h2>
+        <div class="form__companies">
+            <div class="form__container form__container--facebook">
+                <img src="@Assets["/icons/facebook.svg"]" alt="Facebook icon" class="form__icon">
+                <span>Facebook</span>
+            </div>
+            <div class="form__container">
+                <img src="@Assets["/icons/google.svg"]" class="form__icon" alt="Google icon">
+                <span>Google</span>
+            </div>
+            <div class="form__container form__container--github">
+                <img src="@Assets["/icons/github.svg"]" class="form__icon form__icon--github" alt="Github icon">
+                <span>Github</span>
+            </div>
+        </div>
+        <h2><span class="form__text">or</span></h2>
+        <EditForm class="form" EditContext="_loginContext">
+            <ValidationSummary/>
+            <InputText class="form__input" id="nickname" placeholder="Nickname" @bind-Value="_loginDto.Nickname" />
+            <InputText class="form__input" id="email" placeholder="Email" @bind-Value="_loginDto.Email" />
+            <InputText class="form__input"  id="password" placeholder="Password" @bind-Value="_loginDto.Password" />
+            <InputText class="form__input" id="confirmedPassword" placeholder="Confirmed password" @bind-Value="_loginDto.ConfirmedPassword" />
+            <input class="form__submit" type="submit" />
+        </EditForm>
+    </div>
+</main>
