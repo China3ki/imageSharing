@@ -5,7 +5,7 @@
     <div class="header__buttons">
         <i class="header__icon header__icon--mode @(ThemeService.Theme == Theme.Light ? "light" : "dark")" @onclick="ThemeService.ToogleTheme"></i>
         <a href="login" class="header__login text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Login</a>
-        <a href="" class="header__register text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Register</a>
+        <a href="register" class="header__register text--hover @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Register</a>
     </div>
     <form class="header__form">
         <input class="header__search @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")" type="text" placeholder="@(SearchService.SearchBy == SearchOption.None ? "Search" : SearchService.SearchBy == SearchOption.Title ? "Search by title" : "Search by tags")" minlength="3" />
