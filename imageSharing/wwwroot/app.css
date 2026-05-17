@@ -103,7 +103,8 @@ a.light--text:visited {
   border-bottom: 1px solid #4fd918;
   width: 100%;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 .form__wrapper h2 {
   width: 100%;
@@ -165,6 +166,11 @@ a.light--text:visited {
   width: 80%;
   max-width: 500px;
 }
+.form .form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .form .form__input {
   height: 45px;
   width: 100%;
@@ -210,4 +216,13 @@ a.light--text:visited {
   display: flex;
   justify-content: space-between;
   padding: 0px 15px 0px 15px;
+}
+
+.validation-errors {
+  padding: 10px;
+}
+
+.validation-message {
+  color: red;
+  list-style-type: none;
 }

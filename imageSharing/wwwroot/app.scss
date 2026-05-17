@@ -90,7 +90,8 @@ a.light--text:visited {
         border-bottom: 1px solid $second;
         width:100%;
         text-align:center;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
+        margin-bottom:5px;
     }
 
     h2 {
@@ -153,6 +154,11 @@ a.light--text:visited {
         gap:15px;
         width: 80%;
         max-width: 500px;
+        .form__inputs {
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
         .form__input {
             height:45px;
             width:100%;
@@ -200,3 +206,10 @@ a.light--text:visited {
             padding: 0px 15px 0px 15px;
         }
 }
+    .validation-errors {
+        padding:10px;
+    }
+    .validation-message {
+        color:red;
+        list-style-type:none;
+    }

@@ -4,10 +4,6 @@
 <main class="main__form @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
     <div class="form__wrapper">
         <h1 class="form__header @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Register</h1>
-        <div class="form__info">
-            <span class="form__info--text @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Already have account?</span>
-            <a class="form__info--link @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")" href=#>Login</a>
-        </div>
         <h2><span class="form__text @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Register with</span></h2>
         <div class="form__companies">
             <a class="form__container form__container--facebook @(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")">
@@ -24,16 +20,19 @@
             </a>
         </div>
         <h2><span class="form__text @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">or</span></h2>
-        <EditForm class="form" EditContext="_loginContext">
-            <ValidationSummary/>
-            <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="nickname" placeholder="Nickname" @bind-Value="_loginDto.Nickname" />
-            <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="email" placeholder="Email" @bind-Value="_loginDto.Email" />
-            <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="password" placeholder="Password" @bind-Value="_loginDto.Password" />
-            <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="confirmedPassword" placeholder="Confirmed password" @bind-Value="_loginDto.ConfirmedPassword" />
-            <div class="form__options">
-                <button class="form__clear @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Clear</button>
-                <input class="form__submit @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")" type="submit" value="Register" />
+        <EditForm class="form" EditContext="_registerContext" OnValidSubmit="Submit">
+            <DataAnnotationsValidator/>
+            <div class="form__inputs">
+                <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="nickname" placeholder="Nickname" @bind-Value="_registerDto.Nickname" />
+                <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="email" placeholder="Email" @bind-Value="_registerDto.Email" />
+                <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="password" placeholder="Password" @bind-Value="_registerDto.Password" type="password" />
+                <InputText class="@($"form__input {(ThemeService.Theme == Theme.Light ? "light--main" : "dark--main")}")" id="confirmedPassword" placeholder="Confirmed password" @bind-Value="_registerDto.ConfirmedPassword" type="password" />
+                <div class="form__options">
+                    @* <button class="form__clear @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")">Clear</button> *@
+                    <input class="form__submit @(ThemeService.Theme == Theme.Light ? "light--text" : "dark--text")" type="submit" value="Register" />
+                </div>
             </div>
+            <ValidationSummary />
         </EditForm>
     </div>
 </main>
